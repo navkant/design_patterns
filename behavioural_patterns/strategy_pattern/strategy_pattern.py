@@ -46,7 +46,7 @@ class Context:
     def strategy(self, strategy: Strategy) -> None:
         self._strategy = strategy
 
-    def use_case(self, data: Union[List[str], List[int]]) -> None:
+    def use_case(self, data: Union[List[str], List[int]]) -> List:
         return self._strategy.do_algorithm(data)
 
 

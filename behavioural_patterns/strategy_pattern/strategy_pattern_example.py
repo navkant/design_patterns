@@ -15,22 +15,22 @@ from abc import ABC, abstractmethod
 
 class DriveStrategy(ABC):
     @abstractmethod
-    def drive(self):
+    def drive(self) -> None:
         print("Vehicle is driving.")
 
 
 class SportsDriveStrategy(DriveStrategy):
-    def drive(self):
+    def drive(self) -> None:
         print("Sports car is driving.")
 
 
 class PassengerCarDriveStrategy(DriveStrategy):
-    def drive(self):
+    def drive(self) -> None:
         print("Passenger car is driving.")
 
 
 class MuvDriveStrategy(DriveStrategy):
-    def drive(self):
+    def drive(self) -> None:
         print("MUV car is driving")
 
 
@@ -38,7 +38,7 @@ class Vehicle:
     def __init__(self, drive_strategy: DriveStrategy):
         self.drive_strategy = drive_strategy
 
-    def drive(self):
+    def drive(self) -> None:
         self.drive_strategy.drive()
 
 
