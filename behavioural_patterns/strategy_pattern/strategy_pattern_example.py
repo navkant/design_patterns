@@ -7,7 +7,7 @@
 # that they will be implementing this drive() method in same way which will lead to code duplicacy. Here we can use
 # strategy pattern. We can have an interface(abstract class) called DriveStrategy which will have an abstract method
 # drive(). This DriveStrategy can be subclasses with concrete strategies which will be use by actual vehicle class.
-# Then subclasses will have an attribute to store reference to this strategy. Lets implement this now.
+# Then subclasses will have an attribute to store reference to this strategy. Let's implement this now.
 
 
 from abc import ABC, abstractmethod
