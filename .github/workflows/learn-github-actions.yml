@@ -2,7 +2,7 @@ name: learn-github-actions
 run-name: ${{ github.actor }} is learning GitHub Actions
 on: [push]
 jobs:
-  check-bats-version:
+  check-build:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v3
@@ -12,7 +12,7 @@ jobs:
       - run: ./run_mypy.sh
       - run: python -m unittest discover .
 
-  check-build:
+  unit-tests:
       runs-on: ubuntu-latest
       steps:
         - uses: actions/checkout@v3
