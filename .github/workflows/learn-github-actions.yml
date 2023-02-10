@@ -9,4 +9,5 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           python-version: '3.8'
+      - run: pip install -r requirements.txt
       - run: ./run_mypy.sh
